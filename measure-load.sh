@@ -1,6 +1,6 @@
 #!/bin/bash
-
-LOG_DIR=/tmp
+BASEDIR=$(dirname "$0")
+LOG_DIR=${BASEDIR}/tmp
 mkdir -p ${LOG_DIR}
 # 保存负载信息的文件
 LOAD_FILE=${LOG_DIR}/load.txt
