@@ -1,8 +1,13 @@
 # server-blame
-用它在服务器宕机的时候让你不背(背)黑锅！！！
+## 用它在服务器宕机的时候让你不背(背)黑锅！！！
 
-record top cpu &amp; memory process every 10 minutes 
+record top cpu &amp; memory process
 
+# 快速使用
+```
+git clone
+bash install.sh
+```
 
 # edit crontab, every 10 minutes
 ```
@@ -18,10 +23,4 @@ crontab -e
 ```
 crontab -u username -e
 * * * * * bash /path/to/script.sh
-```
-
-# 自动化
-```
-git clone
-bash install.sh
 ```
