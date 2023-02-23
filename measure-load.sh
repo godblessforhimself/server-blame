@@ -4,9 +4,9 @@ LOG_DIR=/tmp
 # 保存负载信息的文件
 LOAD_FILE=${LOG_DIR}/load.txt
 
-# 获取前三高的CPU和内存进程，保存在变量中
-TOP_CPU=$(ps aux --no-headers | sort -rk 3 | head -n 3)
-TOP_MEM=$(ps aux --no-headers | sort -rk 4 | head -n 3)
+# 获取高CPU和内存进程，保存在变量中
+TOP_CPU=$(ps aux --no-headers | sort -rk 3 | cut -c1-150 | head -n 10)
+TOP_MEM=$(ps aux --no-headers | sort -rk 4 | cut -c1-150 | head -n 10)
 
 # 将负载信息写入文件
 echo "CPU负载信息：" > $LOAD_FILE
