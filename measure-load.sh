@@ -6,14 +6,14 @@ mkdir -p ${LOG_DIR}
 LOAD_FILE=${LOG_DIR}/load.txt
 
 # 获取高CPU和内存进程，保存在变量中
-TOP_CPU=$(ps aux --no-headers | sort -rk 3 | cut -c1-150 | head -n 10)
-TOP_MEM=$(ps aux --no-headers | sort -rk 4 | cut -c1-150 | head -n 10)
+TOP_CPU=$(ps aux --no-headers | sort -nrk 3 | cut -c1-150 | head -n 10)
+TOP_MEM=$(ps aux --no-headers | sort -nrk 4 | cut -c1-150 | head -n 10)
 
 # 将负载信息写入文件
-echo "CPU负载信息：" > $LOAD_FILE
+echo "CPU负载信息：（第三列）" > $LOAD_FILE
 echo "$TOP_CPU" >> $LOAD_FILE
 echo "" >> $LOAD_FILE
-echo "内存负载信息：" >> $LOAD_FILE
+echo "内存负载信息：（第四列）" >> $LOAD_FILE
 echo "$TOP_MEM" >> $LOAD_FILE
 echo "" >> $LOAD_FILE
 
