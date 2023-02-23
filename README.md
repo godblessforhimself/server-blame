@@ -1,4 +1,6 @@
 # server-blame
+用它在服务器宕机的时候让你不背(背)黑锅！！！
+
 record top cpu &amp; memory process every 10 minutes 
 
 
