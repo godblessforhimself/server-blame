@@ -17,3 +17,9 @@ crontab -e
 crontab -u username -e
 * * * * * bash /path/to/script.sh
 ```
+
+# 自动化
+```
+git clone
+bash install.sh
+```
