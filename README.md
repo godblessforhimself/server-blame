@@ -6,6 +6,7 @@ record top cpu &amp; memory process
 # 快速使用
 ```
 git clone
+# 修改install.sh里的cron表达式。默认15m
 bash install.sh
 ```
 
@@ -14,11 +15,7 @@ bash install.sh
 crontab -e
 */10 * * * * bash /path/to/script.sh
 ```
-# edit cron, every minute
-```
-crontab -e
-* * * * * bash /path/to/script.sh
-```
+
 # edit other user's cron
 ```
 crontab -u username -e
